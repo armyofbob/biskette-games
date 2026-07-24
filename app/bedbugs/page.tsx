@@ -78,15 +78,6 @@ export default function BedBugsPage() {
         <div className="wowcube-art"><img src="/assets/bedbugs-wowcube.webp" alt="BedBugs displayed across the connected screens of a WOWCube" /></div>
       </section>
 
-      <section className="gallery-section" id="gallery">
-        <div className="section-heading"><div><span className="eyebrow eyebrow-dark">From the room</span><h2>Candy, critters, and one very hungry worm.</h2></div></div>
-        <div className="gallery-grid">
-          <figure className="gallery-playfield"><img src="/assets/bedbugs-playfield.png" alt="BedBugs bedroom playfield spanning four connected screens" /><figcaption>The bedroom floor</figcaption></figure>
-          <figure className="gallery-character purple-card"><img src="/assets/purple-bug.webp" alt="A purple bug character from BedBugs" /><figcaption>One of the uninvited guests</figcaption></figure>
-          <figure className="gallery-character worm-card"><img src="/assets/worm.png" alt="The friendly green worm from BedBugs" /><figcaption>The worm below</figcaption></figure>
-        </div>
-      </section>
-
       <section className="closing-cta">
         <img src="/assets/bedbugs-icon.webp" alt="" aria-hidden="true" />
         <div><span className="eyebrow">Coming to WOWCube</span><h2>Bedtime is about to get buggy.</h2><p>Follow development and launch news.</p></div>
