@@ -54,19 +54,6 @@ export default function BedBugsPage() {
         </div>
       </section>
 
-      <section className="score-section">
-        <div>
-          <span className="eyebrow">Build the streak</span>
-          <h2>Fresh candy.<br />Bigger combos.</h2>
-          <p>Grab candy before it goes stale. Feed bugs to the worm. Keep the combo alive.</p>
-        </div>
-        <div className="score-cards" aria-label="Scoring examples">
-          <div><span>Fresh candy</span><strong>+50</strong><small>Extends your streak</small></div>
-          <div><span>Stale candy</span><strong>+10</strong><small>No streak bonus</small></div>
-          <div className="score-highlight"><span>Worm snack</span><strong>+100×</strong><small>Uses your multiplier</small></div>
-        </div>
-      </section>
-
       <section className="wowcube-section" id="wowcube">
         <div className="wowcube-copy">
           <span className="eyebrow">Built for WOWCube</span>
