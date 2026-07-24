@@ -16,7 +16,7 @@ function BedBugsHeader() {
       </nav>
       <details className="mobile-menu">
         <summary aria-label="Open navigation"><span /><span /><span /></summary>
-        <nav aria-label="Mobile navigation"><Link href="/">Home</Link><Link href="#story">Story</Link><Link href="#wowcube">WOWCube</Link><Link href="#gallery">Gallery</Link></nav>
+        <nav aria-label="Mobile navigation"><Link href="/">Home</Link><Link href="#story">Story</Link><Link href="#wowcube">WOWCube</Link></nav>
       </details>
     </header>
   );
