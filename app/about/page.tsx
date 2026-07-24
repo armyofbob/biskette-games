@@ -11,10 +11,6 @@ export default function AboutPage() {
           <h1>Bob Glahn</h1>
           <p>Independent game designer and producer.</p>
         </div>
-        <blockquote>
-          “Good production should make creative teams faster, not heavier.”
-          <cite>Bob Glahn</cite>
-        </blockquote>
       </section>
       <section className="about-body">
         <div className="about-lead">
