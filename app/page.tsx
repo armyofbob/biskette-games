@@ -13,7 +13,7 @@ export default function Home() {
           <p>Playful systems, theatrical premises, and unusual ways to play.</p>
           <div className="button-row">
             <Link className="button button-primary" href="/bedbugs">Explore BedBugs <span aria-hidden="true">→</span></Link>
-            <Link className="button button-ghost" href="/games">See all games</Link>
+            <Link className="button button-ghost" href="/games">View Bob&apos;s portfolio</Link>
           </div>
           <div className="hero-note"><span className="status-dot" /> Currently building for WOWCube</div>
         </div>
@@ -43,8 +43,8 @@ export default function Home() {
 
       <section className="home-work" aria-labelledby="work-title">
         <div className="section-heading">
-          <div><span className="eyebrow eyebrow-dark">Recent work</span><h2 id="work-title">Five games.<br />No repeated recipe.</h2></div>
-          <p>Solo games, team projects, and one irresponsible Viking helicopter.</p>
+          <div><span className="eyebrow eyebrow-dark">Bob&apos;s recent work</span><h2 id="work-title">Five games.<br />No repeated recipe.</h2></div>
+          <p>One solo game, four team projects, and one irresponsible Viking helicopter.</p>
         </div>
         <div className="home-game-grid">
           {games.map((game) => (
@@ -56,7 +56,7 @@ export default function Home() {
             </Link>
           ))}
         </div>
-        <Link className="button button-ghost work-button" href="/games">View the full portfolio →</Link>
+        <Link className="button button-ghost work-button" href="/games">View Bob&apos;s portfolio →</Link>
       </section>
 
       <section className="studio-intro" id="studio">
