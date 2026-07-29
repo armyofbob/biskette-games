@@ -15,7 +15,7 @@ export default function AboutPage() {
       <section className="about-body">
         <div className="about-lead">
           <h2>Games with a point of view.</h2>
-          <p>Biskette Games is my independent studio. I design, illustrate, and produce approachable games with tactile ideas, theatrical premises, and a little mischief.</p>
+          <p>Biskette Games is my independent studio. I design, illustrate, and produce playful, tactile daymares you won’t want to wake up from, with theatrical premises and a little darkness baked into the edges. The art should look inviting enough to touch, and occasionally delicious enough to make you question your judgment.</p>
         </div>
         <div className="about-columns">
           <article><span>Design + art</span><h3>Playable ideas with a visual voice</h3><p>Clear systems, tactile inputs, and original artwork.</p></article>
