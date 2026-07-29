@@ -63,9 +63,9 @@ export const games: Game[] = [
     imageAlt: "Gjallarcopter boss battle gameplay",
     short: "Vikings. Helicopter. Alone. Somehow, it works.",
     description: [
-      "Pilot a hand-drawn Norse helicopter and challenge mythic threats in an arcade boss battle. I created the concept and all artwork.",
+      "Pilot a hand-drawn Norse helicopter and challenge mythic threats in an arcade boss battle. I created all of the artwork.",
     ],
-    role: "Game concept and all artwork",
+    role: "All artwork",
     collaborators: "Created with SwirlyGig for MixJam 19",
     itchUrl: "https://swirlygig.itch.io/gjallarcopter",
     accent: "#89a6b1",
