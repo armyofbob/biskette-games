@@ -9,7 +9,7 @@ export default function Home() {
       <section className="home-hero">
         <div className="hero-copy reveal">
           <span className="eyebrow">Independent game studio</span>
-          <h1>Playful worlds.<br /><em>Games with bite.</em></h1>
+          <h1>We make daymares<br /><em>come true.</em></h1>
           <p>Playful systems, theatrical premises, and unusual ways to play.</p>
           <div className="button-row">
             <Link className="button button-primary" href="/bedbugs">Explore BedBugs <span aria-hidden="true">→</span></Link>
