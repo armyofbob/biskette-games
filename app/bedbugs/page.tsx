@@ -71,7 +71,7 @@ export default function BedBugsPage() {
         <a className="button button-primary" href="https://armyofbob.itch.io/" target="_blank" rel="noreferrer">Follow the studio <span aria-hidden="true">↗</span></a>
       </section>
 
-      <footer className="site-footer"><div><strong>BedBugs by Biskette Games</strong><span>© 2026 Bob Glahn / Biskette Games</span></div><div><Link href="/games">All games</Link><Link href="/about">About Bob</Link><a href="https://wowcube.com/" target="_blank" rel="noreferrer">WOWCube</a></div></footer>
+      <footer className="site-footer"><div><strong>BedBugs by Biskette Games</strong><span>© 2026 Robert Glahn / Biskette Games</span></div><div><Link href="/games">All games</Link><Link href="/about">About Bob</Link><a href="https://wowcube.com/" target="_blank" rel="noreferrer">WOWCube</a></div></footer>
     </main>
   );
 }
