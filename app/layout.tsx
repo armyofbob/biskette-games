@@ -19,8 +19,13 @@ export const metadata: Metadata = {
     "codex-preview": "development",
   },
   icons: {
-    icon: "/assets/biskette-games.png",
-    shortcut: "/assets/biskette-games.png",
+    icon: [
+      { url: "/favicon.ico", sizes: "any" },
+      { url: "/assets/favicon-32.png", type: "image/png", sizes: "32x32" },
+      { url: "/assets/biskette-games-512.png", type: "image/png", sizes: "512x512" },
+    ],
+    shortcut: "/favicon.ico",
+    apple: "/apple-touch-icon.png",
   },
 };
 
