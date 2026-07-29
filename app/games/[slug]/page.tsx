@@ -17,7 +17,7 @@ export default async function GamePage({ params }: { params: Promise<{ slug: str
       <Header />
       <section className="project-hero">
         <div className="project-hero-copy">
-          <Link className="back-link" href="/games">← All games</Link>
+          <Link className="back-link" href="/games">← Portfolio</Link>
           <div className="project-meta"><span>{game.year}</span><span>{game.genre}</span><span>{game.engine}</span></div>
           <h1>{game.title}</h1>
           <p>{game.kicker}</p>
@@ -30,7 +30,7 @@ export default async function GamePage({ params }: { params: Promise<{ slug: str
         </div>
         <aside>
           <span>Bob&apos;s role</span><strong>{game.role}</strong>
-          <span>Project</span><strong>{game.collaborators}</strong>
+          <span>Project credits</span><strong>{game.collaborators}</strong>
           <a className="button button-primary" href={game.itchUrl} target="_blank" rel="noreferrer">Play on itch.io <span aria-hidden="true">↗</span></a>
         </aside>
       </section>
