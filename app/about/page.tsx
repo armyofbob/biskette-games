@@ -15,11 +15,11 @@ export default function AboutPage() {
       <section className="about-body">
         <div className="about-lead">
           <h2>Games with a point of view.</h2>
-          <p>Biskette Games is my independent studio. I design, illustrate, and produce playful, tactile daymares you won’t want to wake up from, with theatrical premises and a little darkness baked into the edges. The art should look inviting enough to touch, and occasionally delicious enough to make you question your judgment.</p>
+          <p>Biskette Games is my independent studio. I design, illustrate, and produce playful, tactile daymares you won’t want to wake up from, with theatrical premises and a little darkness baked into the edges. That blend of tactile play, theatrical mischief, and candy-coated darkness is the flavor of Biskette.</p>
         </div>
         <div className="about-columns">
-          <article><span>Design + art</span><h3>Playable ideas with a visual voice</h3><p>Clear systems, tactile inputs, and original artwork.</p></article>
-          <article><span>Production</span><h3>Creative work that ships</h3><p>Practical scope, useful documentation, and steady coordination.</p></article>
+          <article><span>Design + art</span><h3>Playable ideas with a visual voice</h3><p>Clear systems and tactile inputs, with original artwork as the cherry on top.</p></article>
+          <article><span>Production</span><h3>Creative work that ships</h3><p>Practical scope, useful documentation, and a production plan that never bites off more than it can chew.</p></article>
           <article><span>Perspective</span><h3>Theatre meets technology</h3><p>Games shaped by staging, audience, and timing.</p></article>
         </div>
       </section>
