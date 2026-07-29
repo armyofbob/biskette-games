@@ -7,9 +7,9 @@ export default function GamesPage() {
     <main>
       <Header />
       <section className="inner-hero">
-        <span className="eyebrow">Selected work</span>
+        <span className="eyebrow">Bob&apos;s selected work</span>
         <h1>Games built from<br /><em>strong, strange ideas.</em></h1>
-        <p>Solo experiments, team projects, and tactile games for new hardware.</p>
+        <p>A portfolio of solo experiments and collaborative projects, with Bob&apos;s role credited on each one.</p>
       </section>
       <section className="portfolio-list">
         {games.map((game, index) => (
