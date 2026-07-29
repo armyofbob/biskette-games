@@ -29,7 +29,7 @@ export function Header() {
 export function Footer() {
   return (
     <footer className="site-footer">
-      <div><strong>Biskette Games</strong><span>© 2026 Bob Glahn / Biskette Games</span></div>
+      <div><strong>Biskette Games</strong><span>© 2026 Robert Glahn / Biskette Games</span></div>
       <div><span>Follow us @BisketteGames</span><Link href="/games">Portfolio</Link><Link href="/about">About Bob</Link><a href="https://armyofbob.itch.io/" target="_blank" rel="noreferrer">Bob&apos;s itch.io</a></div>
     </footer>
   );
