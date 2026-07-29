@@ -37,7 +37,6 @@ export default function BedBugsPage() {
         </div>
         <div className="bb-hero-art reveal delay-one">
           <img src="/assets/bedbugs-gameplay.webp" alt="BedBugs gameplay with Lily steering her bed across the bedroom floor" />
-          <div className="night-label"><span>Night 1</span><strong>Keep the candy moving.</strong></div>
         </div>
       </section>
 
