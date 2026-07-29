@@ -13,8 +13,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: { default: "Biskette Games | Playful worlds. Games with bite.", template: "%s | Biskette Games" },
-  description: "Biskette Games creates character-driven games for new ways to play, including BedBugs for WOWCube.",
+  title: { default: "Biskette Games | We make daymares come true.", template: "%s | Biskette Games" },
+  description: "Biskette Games is Bob Glahn's independent studio, creating character-driven games with playful systems, theatrical premises, and unusual ways to play.",
   other: {
     "codex-preview": "development",
   },
