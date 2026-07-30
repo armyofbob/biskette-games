@@ -4,14 +4,14 @@ export function Header() {
   return (
     <header className="site-header">
       <Link className="brand" href="/" aria-label="Biskette Games home">
-        <img src="/assets/biskette-games.png" alt="" />
+        <img src="/assets/biskette-games.png" alt="" width="512" height="512" />
         <span>Biskette Games</span>
       </Link>
       <nav className="desktop-nav" aria-label="Main navigation">
         <Link href="/games">Portfolio</Link>
         <Link href="/about">Bob Glahn</Link>
         <Link href="/bedbugs">BedBugs</Link>
-        <a className="social-link" href="https://armyofbob.itch.io/" target="_blank" rel="noreferrer">Bob&apos;s itch.io</a>
+        <a className="social-link" href="https://armyofbob.itch.io/" target="_blank" rel="noopener noreferrer">Bob&apos;s itch.io</a>
       </nav>
       <details className="mobile-menu">
         <summary aria-label="Open navigation"><span /><span /><span /></summary>
@@ -19,7 +19,7 @@ export function Header() {
           <Link href="/games">Portfolio</Link>
           <Link href="/about">Bob Glahn</Link>
           <Link href="/bedbugs">BedBugs</Link>
-          <a href="https://armyofbob.itch.io/" target="_blank" rel="noreferrer">Bob&apos;s itch.io</a>
+          <a href="https://armyofbob.itch.io/" target="_blank" rel="noopener noreferrer">Bob&apos;s itch.io</a>
         </nav>
       </details>
     </header>
@@ -30,7 +30,7 @@ export function Footer() {
   return (
     <footer className="site-footer">
       <div><strong>Biskette Games</strong><span>© 2026 Robert Glahn / Biskette Games</span></div>
-      <div><span>Follow us @BisketteGames</span><Link href="/games">Portfolio</Link><Link href="/about">About Bob</Link><a href="https://armyofbob.itch.io/" target="_blank" rel="noreferrer">Bob&apos;s itch.io</a></div>
+      <div><span>Independent game studio</span><Link href="/games">Portfolio</Link><Link href="/about">About Bob</Link><a href="https://armyofbob.itch.io/" target="_blank" rel="noopener noreferrer">Bob&apos;s itch.io</a></div>
     </footer>
   );
 }

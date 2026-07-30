@@ -1,11 +1,21 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import { Footer, Header } from "../components";
+import { createPageMetadata } from "../site";
 import { games } from "./data";
+
+export const metadata: Metadata = createPageMetadata({
+  title: "Games & Portfolio | Bob Glahn, Biskette Games",
+  description:
+    "A portfolio of Bob Glahn's solo experiments and collaborative game projects, with his role credited on each one.",
+  path: "/games",
+});
 
 export default function GamesPage() {
   return (
-    <main>
+    <>
       <Header />
+      <main id="main-content">
       <section className="inner-hero">
         <span className="eyebrow">Bob&apos;s selected work</span>
         <h1>Games built from<br /><em>strong, strange ideas.</em></h1>
@@ -15,7 +25,7 @@ export default function GamesPage() {
         {games.map((game, index) => (
           <article className="portfolio-row" key={game.slug} style={{"--game-accent": game.accent} as React.CSSProperties}>
             <Link className="portfolio-image" href={`/games/${game.slug}`}>
-              <img src={game.image} alt={game.imageAlt} />
+              <img src={game.image} alt={game.imageAlt} width="347" height="500" loading="lazy" />
               <span>0{index + 1}</span>
             </Link>
             <div className="portfolio-copy">
@@ -28,7 +38,8 @@ export default function GamesPage() {
           </article>
         ))}
       </section>
+      </main>
       <Footer />
-    </main>
+    </>
   );
 }

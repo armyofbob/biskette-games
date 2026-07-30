@@ -1,5 +1,12 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import {
+  createPageMetadata,
+  HOME_SOCIAL_IMAGE,
+  JsonLd,
+  organizationJsonLd,
+  personJsonLd,
+} from "./site";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -13,11 +20,14 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: { default: "Biskette Games | We make daymares come true.", template: "%s | Biskette Games" },
-  description: "Biskette Games is Bob Glahn's independent studio, creating character-driven games with playful systems, theatrical premises, and unusual ways to play.",
-  other: {
-    "codex-preview": "development",
-  },
+  ...createPageMetadata({
+    title: "Biskette Games | We make daymares come true.",
+    description:
+      "Biskette Games is Bob Glahn's independent studio, creating character-driven games with playful systems, theatrical premises, and unusual ways to play.",
+    path: "/",
+    image: HOME_SOCIAL_IMAGE,
+    imageAlt: "BedBugs running across the screens of a WOWCube",
+  }),
   icons: {
     icon: [
       { url: "/favicon.ico", sizes: "any" },
@@ -39,6 +49,11 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        <a className="skip-link" href="#main-content">
+          Skip to main content
+        </a>
+        <JsonLd data={organizationJsonLd} />
+        <JsonLd data={personJsonLd} />
         {children}
       </body>
     </html>
