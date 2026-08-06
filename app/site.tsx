@@ -4,6 +4,8 @@ export const SITE_NAME = "Biskette Games";
 export const SITE_URL = "https://biskettegames.com";
 export const BEDBUGS_STORE_URL = "https://wowcube.com/store/bedbugs";
 export const ITCH_URL = "https://armyofbob.itch.io/";
+export const INSTAGRAM_URL = "https://www.instagram.com/biskettegames/";
+export const DISCORD_URL = "https://discord.gg/QtGWN3fBT";
 
 export const HOME_SOCIAL_IMAGE = `${SITE_URL}/assets/bedbugs-wowcube.webp`;
 export const BEDBUGS_SOCIAL_IMAGE = `${SITE_URL}/assets/bedbugs-gameplay.webp`;
@@ -74,7 +76,7 @@ export const organizationJsonLd = {
   founder: {
     "@id": `${SITE_URL}/about#bob-glahn`,
   },
-  sameAs: [ITCH_URL],
+  sameAs: [ITCH_URL, INSTAGRAM_URL, DISCORD_URL],
 };
 
 export const personJsonLd = {

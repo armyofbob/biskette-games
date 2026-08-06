@@ -1,4 +1,5 @@
 import assert from "node:assert/strict";
+import { readFile } from "node:fs/promises";
 import test from "node:test";
 
 const routes = [
@@ -206,6 +207,41 @@ test("launch CTAs and structured data use the official store URL", async () => {
   assert.match(bedBugs, /BedBugs: <\/span>Don(?:&#x27;|')t let them bite!/);
   assert.match(home, /"@type":"Organization"/);
   assert.match(home, /"@type":"Person"/);
+});
+
+test("every public page links to Biskette Games on Instagram and Discord", async (t) => {
+  const instagramUrl = "https://www.instagram.com/biskettegames/";
+  const discordUrl = "https://discord.gg/QtGWN3fBT";
+
+  for (const route of routes) {
+    await t.test(route.path, async () => {
+      const response = await fetchRoute(route.path);
+      const html = htmlDecode(await response.text());
+
+      assert.equal(response.status, 200);
+      assert.match(html, new RegExp(`href=["']${instagramUrl.replaceAll("/", "\\/")}["']`, "i"));
+      assert.match(html, new RegExp(`href=["']${discordUrl.replaceAll("/", "\\/")}["']`, "i"));
+      assert.match(html, /Follow @biskettegames/i);
+      assert.match(html, /instagram-icon/i);
+      assert.match(html, /discord-icon/i);
+      assert.match(html, /Join Biskette on Discord/i);
+    });
+  }
+});
+
+test("social links use the locally packaged official service marks", async () => {
+  const [css, instagram, discord] = await Promise.all([
+    readFile(new URL("../app/globals.css", import.meta.url), "utf8"),
+    readFile(new URL("../public/assets/instagram-glyph-white.svg", import.meta.url), "utf8"),
+    readFile(new URL("../public/assets/discord-symbol-blurple.svg", import.meta.url), "utf8"),
+  ]);
+
+  assert.match(css, /instagram-glyph-white\.svg/);
+  assert.match(css, /discord-symbol-blurple\.svg/);
+  assert.match(instagram, /viewBox="0 0 1000 1000"/);
+  assert.match(instagram, /fill:#fff/);
+  assert.match(discord, /viewBox="0 0 65 48"/);
+  assert.match(discord, /fill="#5865F2"/);
 });
 
 test("sitemap and robots cover every public route", async () => {

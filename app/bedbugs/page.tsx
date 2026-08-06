@@ -4,6 +4,8 @@ import {
   BEDBUGS_SOCIAL_IMAGE,
   BEDBUGS_STORE_URL,
   createPageMetadata,
+  DISCORD_URL,
+  INSTAGRAM_URL,
   JsonLd,
   SITE_URL,
 } from "../site";
@@ -134,7 +136,16 @@ export default function BedBugsPage() {
         </a>
       </section>
       </main>
-      <footer className="site-footer"><div><strong>BedBugs by Biskette Games</strong><span>© 2026 Robert Glahn / Biskette Games</span></div><div><Link href="/games">All games</Link><Link href="/about">About Bob</Link><a href="https://wowcube.com/" target="_blank" rel="noopener noreferrer">WOWCube</a></div></footer>
+      <footer className="site-footer">
+        <div><strong>BedBugs by Biskette Games</strong><span>© 2026 Robert Glahn / Biskette Games</span></div>
+        <div className="footer-links">
+          <Link href="/games">All games</Link>
+          <Link href="/about">About Bob</Link>
+          <a href="https://wowcube.com/" target="_blank" rel="noopener noreferrer">WOWCube</a>
+          <a className="footer-social-link" href={INSTAGRAM_URL} target="_blank" rel="noopener noreferrer" aria-label="Follow Biskette Games on Instagram (opens in a new tab)"><span className="social-service-icon instagram-icon" aria-hidden="true" />Follow @biskettegames <span aria-hidden="true">↗</span></a>
+          <a className="footer-social-link" href={DISCORD_URL} target="_blank" rel="noopener noreferrer" aria-label="Join Biskette on Discord (opens in a new tab)"><span className="social-service-icon discord-icon" aria-hidden="true" />Join Biskette on Discord <span aria-hidden="true">↗</span></a>
+        </div>
+      </footer>
     </>
   );
 }
