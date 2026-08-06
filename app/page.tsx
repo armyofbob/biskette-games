@@ -25,7 +25,7 @@ export default function Home() {
       <section className="home-hero">
         <div className="hero-copy reveal">
           <span className="eyebrow">Independent game studio</span>
-          <h1>We make daymares<br /><em>come true.</em></h1>
+          <h1>We play around and<br /><em>find out.</em></h1>
           <p>Playful systems, theatrical premises, and unusual ways to play.</p>
           <div className="button-row">
             <a
