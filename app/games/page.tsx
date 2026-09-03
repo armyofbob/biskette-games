@@ -25,7 +25,7 @@ export default function GamesPage() {
         {games.map((game, index) => (
           <article className="portfolio-row" key={game.slug} style={{"--game-accent": game.accent} as React.CSSProperties}>
             <Link className="portfolio-image" href={`/games/${game.slug}`}>
-              <img src={game.image} alt={game.imageAlt} width="347" height="500" loading="lazy" />
+              <img src={game.image} alt={game.imageAlt} width={game.imageWidth} height={game.imageHeight} loading="lazy" />
               <span>0{index + 1}</span>
             </Link>
             <div className="portfolio-copy">

@@ -1,5 +1,5 @@
 import assert from "node:assert/strict";
-import { readFile } from "node:fs/promises";
+import { readFile, stat } from "node:fs/promises";
 import test from "node:test";
 
 const routes = [
@@ -276,6 +276,34 @@ test("only above-the-fold imagery is eager", async () => {
   assert.ok((home.match(/loading=["']lazy["']/gi) ?? []).length >= 7);
   assert.ok((bedBugs.match(/loading=["']lazy["']/gi) ?? []).length >= 4);
   assert.equal((games.match(/loading=["']lazy["']/gi) ?? []).length, 5);
+});
+
+test("portfolio screenshots are packaged locally", async () => {
+  const imageNames = [
+    "scratcher.webp",
+    "sonoran-snaps.webp",
+    "gjallarcopter.webp",
+    "highbrow-hijinks.webp",
+    "dyscophus.webp",
+  ];
+  const responses = await Promise.all([
+    fetchRoute("/"),
+    fetchRoute("/games"),
+    ...routes
+      .filter((route) => route.path.startsWith("/games/"))
+      .map((route) => fetchRoute(route.path)),
+  ]);
+
+  for (const response of responses) {
+    const html = htmlDecode(await response.text());
+    assert.doesNotMatch(html, /img\.itch\.zone/i);
+  }
+
+  for (const imageName of imageNames) {
+    const imagePath = new URL(`../public/assets/portfolio/${imageName}`, import.meta.url);
+    const image = await stat(imagePath);
+    assert.ok(image.size > 0, `${imageName} is empty`);
+  }
 });
 
 test("mobile navigation remains available without client JavaScript", async () => {

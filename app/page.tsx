@@ -84,7 +84,7 @@ export default function Home() {
         <div className="home-game-grid">
           {games.map((game) => (
             <Link className="home-game-card" href={`/games/${game.slug}`} key={game.slug} style={{"--game-accent": game.accent} as React.CSSProperties}>
-              <div><img src={game.image} alt="" width="347" height="500" loading="lazy" /></div>
+              <div><img src={game.image} alt="" width={game.imageWidth} height={game.imageHeight} loading="lazy" /></div>
               <span>{game.year} / {game.genre}</span>
               <h3>{game.title}</h3>
               <p>{game.short}</p>

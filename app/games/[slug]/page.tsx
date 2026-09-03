@@ -45,7 +45,7 @@ export default async function GamePage({ params }: GamePageProps) {
           <h1>{game.title}</h1>
           <p>{game.kicker}</p>
         </div>
-        <div className="project-hero-image"><img src={game.image} alt={game.imageAlt} width="347" height="500" fetchPriority="high" /></div>
+        <div className="project-hero-image"><img src={game.image} alt={game.imageAlt} width={game.imageWidth} height={game.imageHeight} fetchPriority="high" /></div>
       </section>
       <section className="project-body">
         <div className="project-description">

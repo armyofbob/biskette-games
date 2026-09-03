@@ -6,6 +6,8 @@ export type Game = {
   genre: string;
   engine: string;
   image: string;
+  imageWidth: number;
+  imageHeight: number;
   imageAlt: string;
   short: string;
   description: string[];
@@ -23,7 +25,9 @@ export const games: Game[] = [
     year: "2026",
     genre: "Card game / Pixel art",
     engine: "Godot",
-    image: "https://img.itch.zone/aW1hZ2UvNDI0NjY5MS8yNTY3MjM3Mi5wbmc%3D/347x500/77FwYl.png",
+    image: "/assets/portfolio/scratcher.webp",
+    imageWidth: 1600,
+    imageHeight: 893,
     imageAlt: "Scratcher gameplay",
     short: "Scratch a ticket. Test your luck. Try not to learn anything about probability.",
     description: [
@@ -41,7 +45,9 @@ export const games: Game[] = [
     year: "2025",
     genre: "Exploration / Educational",
     engine: "Godot",
-    image: "https://img.itch.zone/aW1hZ2UvMzI2ODc0OS8xOTU1MjY2NC5wbmc%3D/347x500/OW%2B%2FK1.png",
+    image: "/assets/portfolio/sonoran-snaps.webp",
+    imageWidth: 800,
+    imageHeight: 450,
     imageAlt: "Sonoran Snaps desert exploration gameplay",
     short: "Explore the Sonoran Desert through a camera lens.",
     description: [
@@ -59,7 +65,9 @@ export const games: Game[] = [
     year: "2024",
     genre: "Shooter / Boss battle",
     engine: "Godot",
-    image: "https://img.itch.zone/aW1hZ2UvMzExNDI3Ny8xODYyNTkyNi5wbmc%3D/347x500/GPw8O8.png",
+    image: "/assets/portfolio/gjallarcopter.webp",
+    imageWidth: 1600,
+    imageHeight: 895,
     imageAlt: "Gjallarcopter boss battle gameplay",
     short: "Vikings. Helicopter. Alone. Somehow, it works.",
     description: [
@@ -77,7 +85,9 @@ export const games: Game[] = [
     year: "2024",
     genre: "Action / Arcade",
     engine: "Unreal Engine",
-    image: "https://img.itch.zone/aW1hZ2UvMjQ4NTEzNS8xNDg2NTkzNi5wbmc%3D/347x500/2Yah%2Fy.png",
+    image: "/assets/portfolio/highbrow-hijinks.webp",
+    imageWidth: 879,
+    imageHeight: 494,
     imageAlt: "Highbrow Hijinks arcade gameplay",
     short: "Catch the props. Save the stage. Survive the punchline.",
     description: [
@@ -95,7 +105,9 @@ export const games: Game[] = [
     year: "2023",
     genre: "Rhythm / Mythology",
     engine: "Unity",
-    image: "https://img.itch.zone/aW1hZ2UvMjE0OTkwMi8xMzI1NTU1MS5wbmc%3D/347x500/N1dMv7.png",
+    image: "/assets/portfolio/dyscophus.webp",
+    imageWidth: 1366,
+    imageHeight: 768,
     imageAlt: "Dyscophus rhythm game gameplay",
     short: "Dance uphill. Defy Hades. Keep the groove alive.",
     description: [

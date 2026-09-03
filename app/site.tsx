@@ -27,6 +27,7 @@ export function createPageMetadata({
   imageAlt = "Biskette Games logo",
 }: PageMetadataInput): Metadata {
   const url = absoluteUrl(path);
+  const imageUrl = absoluteUrl(image);
 
   return {
     title,
@@ -40,13 +41,13 @@ export function createPageMetadata({
       url,
       siteName: SITE_NAME,
       type: "website",
-      images: [{ url: image, alt: imageAlt }],
+      images: [{ url: imageUrl, alt: imageAlt }],
     },
     twitter: {
       card: "summary_large_image",
       title,
       description,
-      images: [image],
+      images: [imageUrl],
     },
   };
 }
