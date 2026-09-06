@@ -3,7 +3,7 @@ import { games } from "./games/data";
 import { absoluteUrl } from "./site";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const staticRoutes = ["", "bedbugs", "games", "about"];
+  const staticRoutes = ["", "bedbugs", "games", "about", "privacy"];
   const routes = [
     ...staticRoutes,
     ...games.map((game) => `games/${game.slug}`),

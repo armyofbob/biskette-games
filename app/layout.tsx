@@ -8,10 +8,7 @@ import {
   personJsonLd,
 } from "./site";
 import "./globals.css";
-
-// GA4 web-stream ID supplied by Bob for biskettegames.com.
-const GA_MEASUREMENT_ID: string = "G-H5YYLHY3ST";
-const analyticsEnabled = /^G-[A-Z0-9]+$/.test(GA_MEASUREMENT_ID);
+import CookieConsent from "./cookie-consent";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -50,24 +47,6 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <head>
-        {analyticsEnabled && (
-          <>
-            <script
-              dangerouslySetInnerHTML={{
-                __html: `window.dataLayer = window.dataLayer || [];
-function gtag(){dataLayer.push(arguments);}
-gtag('js', new Date());
-gtag('config', '${GA_MEASUREMENT_ID}');`,
-              }}
-            />
-            <script
-              async
-              src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}
-            />
-          </>
-        )}
-      </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
@@ -77,6 +56,7 @@ gtag('config', '${GA_MEASUREMENT_ID}');`,
         <JsonLd data={organizationJsonLd} />
         <JsonLd data={personJsonLd} />
         {children}
+        <CookieConsent />
       </body>
     </html>
   );
